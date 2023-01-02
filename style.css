@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+:root {
+    --very-dark-blue: hsl(233, 47%, 7%);
+    --dark-desaturated-blue: hsl(244, 38%, 16%);
+    --soft-violet-accent: hsl(277, 64%, 61%);
+    --soft-violet-accent-with-opacity: hsla(277, 85%, 45%, 0.578);
+    --color-white: hsl(0, 0%, 100%);
+    --color-slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --color-slightly-transparent-white-2: hsla(0, 0%, 100%, 0.6);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +18,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: hsl(233, 47%, 7%);
+    background-color: var(--very-dark-blue);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -17,7 +27,6 @@ body {
 }
 
 .main-container {
-    /* border: 1px solid red; */
     max-width: 1080px;
     margin: 0 auto;
 }
@@ -25,7 +34,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: hsl(244, 38%, 16%);
+    background-color: var(--dark-desaturated-blue);
     overflow: hidden;
     margin: 1rem;
     border-radius: 0.4em;
@@ -47,7 +56,7 @@ body {
     height: 100%;
     width: 100%;
     content: '';
-    background-color: hsla(279, 72%, 27%, 0.562)
+    background-color: var(--soft-violet-accent-with-opacity);
     
 }
 
@@ -56,15 +65,15 @@ body {
 }
 
 .title-container h1 {
-    color: hsl(0, 0%, 100%);
+    color: var(--color-white);
 }
 
 .insights-color {
-    color: hsl(277, 64%, 61%);
+    color: var(--soft-violet-accent);
 }
 
 .paragraph {
-    color: hsla(0, 0%, 100%, 0.75);
+    color: var(--color-slightly-transparent-white);
     padding-top: 2rem;
     line-height: 1.5;
 }
@@ -76,12 +85,12 @@ body {
 }
 
 h2 {
-    color: hsla(0, 0%, 100%, 0.75);
+    color: var(--color-slightly-transparent-white-2);
     letter-spacing: 0.1rem;
 }
 
 .stats-heading p {
-    color: hsla(0, 0%, 100%, 0.6);
+    color: var(--color-slightly-transparent-white-2);
     font-size: 0.8rem;
     letter-spacing: 0.1rem;
     margin-top: 0.4rem;
@@ -90,7 +99,7 @@ h2 {
 .attribution { 
     font-size: 0.68rem; 
     text-align: center; 
-    color: white !important;
+    color: var(--color-white) !important;
 }
 
 .attribution a { 
@@ -98,7 +107,7 @@ h2 {
 
 }
 
-@media (max-width: 425px) {
+@media (max-width: 768px) {
     
     body {
         width: fit-content;
